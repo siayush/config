@@ -3,7 +3,11 @@
 # Oh My Zsh
 export ZSH="$HOME/.config/oh-my-zsh"
 ZSH_THEME="robbyrussell"
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+
+# Load nvm lazily to keep startup fast.
+zstyle ':omz:plugins:nvm' lazy yes
+
+plugins=(git nvm zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # Prompt
@@ -28,11 +32,6 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 export HOMEBREW_NO_INSTALL_UPGRADE=1
 
 # Tools
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-
 # fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
