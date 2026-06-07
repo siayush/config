@@ -1,5 +1,4 @@
--- Tree-sitter: builds a real syntax tree of each buffer, powering accurate
--- highlighting, indentation, and folding.
+-- Tree-sitter: syntax tree powering highlighting, indentation, and folding.
 return {
   "nvim-treesitter/nvim-treesitter",
   branch = "main",

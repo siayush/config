@@ -6,7 +6,7 @@ return {
   opts = {
     options = {
       theme = "dracula",
-      globalstatus = true, -- one status line for the whole window (LazyVim style)
+      globalstatus = true, -- single status line for all windows
       component_separators = "",
       section_separators = "",
     },

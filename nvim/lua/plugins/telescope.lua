@@ -1,5 +1,4 @@
--- Telescope: fuzzy finder over files, buffers, grep results, LSP symbols, etc.
--- A picker UI with live filtering and a preview pane.
+-- Telescope: fuzzy finder over files, buffers, grep, LSP symbols, etc.
 return {
   "nvim-telescope/telescope.nvim",
   branch = "master",
@@ -37,8 +36,7 @@ return {
     -- Enable the native sorter if it built successfully.
     pcall(telescope.load_extension, "fzf")
 
-    -- Show line numbers in the preview pane. Telescope fires this User event
-    -- once each preview buffer is loaded; we turn numbers on for that window.
+    -- Show line numbers in the preview pane once each preview buffer loads.
     vim.api.nvim_create_autocmd("User", {
       pattern = "TelescopePreviewerLoaded",
       callback = function()

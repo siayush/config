@@ -1,22 +1,19 @@
--- LSP: mason installs the servers, lspconfig ships their default configs,
--- and Neovim's native vim.lsp.config/enable API wires them up (Neovim 0.11+).
+-- LSP setup via Neovim's native vim.lsp.config API (0.11+); mason installs the servers.
 return {
   "neovim/nvim-lspconfig",
-  -- Load shortly after startup (not waiting for a file) so `ensure_installed`
-  -- runs and missing servers download on their own.
+  -- Load after startup so ensure_installed can pull missing servers.
   event = "VeryLazy",
   dependencies = {
-    "mason-org/mason.nvim", -- configured in mason.lua
+    "mason-org/mason.nvim",
     "mason-org/mason-lspconfig.nvim",
-    "hrsh7th/cmp-nvim-lsp", -- so completion advertises LSP capabilities
+    "hrsh7th/cmp-nvim-lsp", -- advertises LSP completion capabilities
   },
   config = function()
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-    -- Defaults applied to every server.
+    -- Defaults for every server.
     vim.lsp.config("*", { capabilities = capabilities })
 
-    -- Per-server overrides.
     vim.lsp.config("lua_ls", {
       settings = {
         Lua = {
@@ -25,7 +22,6 @@ return {
       },
     })
 
-    -- Install the servers; mason-lspconfig auto-enables each one.
     require("mason").setup()
     require("mason-lspconfig").setup({
       ensure_installed = {
@@ -38,7 +34,7 @@ return {
       },
     })
 
-    -- Buffer-local keymaps, set when a server attaches.
+    -- Buffer-local keymaps, set on server attach.
     vim.api.nvim_create_autocmd("LspAttach", {
       callback = function(args)
         local map = function(keys, fn, desc)

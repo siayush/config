@@ -1,5 +1,4 @@
--- alpha-nvim: a customizable startup dashboard shown when Neovim opens with
--- no file. ASCII-art header plus quick-action buttons.
+-- alpha-nvim: startup dashboard shown when Neovim opens with no file.
 return {
   "goolord/alpha-nvim",
   event = "VimEnter",
