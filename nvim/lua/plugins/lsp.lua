@@ -29,11 +29,12 @@ return {
     require("mason").setup()
     require("mason-lspconfig").setup({
       ensure_installed = {
-        "gopls",   -- Go
-        "pyright", -- Python
-        "ts_ls",   -- JavaScript / TypeScript
-        "clangd",  -- C / C++
-        "lua_ls",  -- Lua (for editing this config)
+        "gopls",    -- Go
+        "pyright",  -- Python
+        "ts_ls",    -- JavaScript / TypeScript
+        "clangd",   -- C / C++
+        "lua_ls",   -- Lua
+        "marksman", -- Markdown
       },
     })
 

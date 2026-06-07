@@ -19,6 +19,12 @@ vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 vim.opt.scrolloff = 8
 
+-- Tree-sitter-based code folding (uses Neovim's built-in foldexpr, 0.10+).
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+-- Start with all folds open so files don't load collapsed.
+vim.opt.foldlevelstart = 99
+
 -- Use a vertical I-beam cursor in every mode.
 vim.opt.guicursor = "a:ver25"
 

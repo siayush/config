@@ -1,8 +1,8 @@
 -- Dracula color scheme.
 return {
   "Mofiqul/dracula.nvim",
-  lazy = false,    -- load during startup
-  priority = 1000, -- load before other plugins so it sets the colors
+  lazy = false,
+  priority = 1000,
   config = function()
     require("dracula").setup({
       italic_comment = true,
