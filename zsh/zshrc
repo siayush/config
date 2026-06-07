@@ -4,6 +4,9 @@
 export ZSH="$HOME/.config/oh-my-zsh"
 ZSH_THEME="robbyrussell"
 
+# Skip compinit's permission audit
+ZSH_DISABLE_COMPFIX="true"
+
 # Load nvm lazily to keep startup fast.
 zstyle ':omz:plugins:nvm' lazy yes
 
