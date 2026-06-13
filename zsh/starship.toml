@@ -1,0 +1,14 @@
+# ~/.config/starship.toml
+
+# Only show: directory + git branch (icon + name) + prompt char
+format = "$directory$git_branch$character"
+
+[directory]
+truncation_length = 1
+truncate_to_repo = true
+style = "bold cyan"
+
+[git_branch]
+symbol = " "
+style = "bold purple"
+format = "[$symbol$branch]($style) "
