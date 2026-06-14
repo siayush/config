@@ -1,7 +1,7 @@
 theme = Dracula
 window-height = 30
 window-width = 100
-title = obsidian
+title = " "
 macos-titlebar-proxy-icon = hidden
 font-family = "MesloLGS NF"
 macos-option-as-alt = true
