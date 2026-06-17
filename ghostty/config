@@ -5,3 +5,4 @@ title = " "
 macos-titlebar-proxy-icon = hidden
 font-family = "MesloLGS NF"
 macos-option-as-alt = true
+cursor-style = bar
