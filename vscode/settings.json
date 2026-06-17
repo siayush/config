@@ -115,4 +115,5 @@
   // Extensions / Security
   "extensions.ignoreRecommendations": true,
   "security.workspace.trust.untrustedFiles": "open",
+  "workbench.layoutControl.enabled": false,
 }
