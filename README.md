@@ -1,4 +1,4 @@
-# config
+# dots
 
 My personal dotfiles — editor, terminal, and shell configuration.
 
